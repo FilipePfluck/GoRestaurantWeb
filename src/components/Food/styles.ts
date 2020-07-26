@@ -5,7 +5,7 @@ interface IFoodPlateProps {
 }
 
 export const Container = styled.div<IFoodPlateProps>`
-  background: #f0f0f5;
+  background: #454545;
   border-radius: 8px;
 
   header {
@@ -32,11 +32,11 @@ export const Container = styled.div<IFoodPlateProps>`
     padding: 30px;
 
     h2 {
-      color: #3d3d4d;
+      color: #ccc;
     }
 
     p {
-      color: #3d3d4d;
+      color: #999591;
 
       margin-top: 16px;
     }
@@ -45,7 +45,8 @@ export const Container = styled.div<IFoodPlateProps>`
       font-style: normal;
       font-size: 24px;
       line-height: 34px;
-      color: #39b100;
+      color: ${props => props.available ? '#39b100' : '#6C6C80'};
+      transition: 0.2s;
 
       b {
         font-weight: 600;
@@ -59,14 +60,14 @@ export const Container = styled.div<IFoodPlateProps>`
     align-items: center;
 
     padding: 20px 30px;
-    background: #e4e4eb;
+    background: #404040;
     border-radius: 0px 0px 8px 8px;
 
     div.icon-container {
       display: flex;
 
       button {
-        background: #fff;
+        background: #404040;
         padding: 10px;
         border-radius: 8px;
         display: flex;
@@ -74,7 +75,7 @@ export const Container = styled.div<IFoodPlateProps>`
         transition: 0.1s;
 
         svg {
-          color: #3d3d4d;
+          color: #ccc;
         }
 
         & + button {
@@ -88,7 +89,7 @@ export const Container = styled.div<IFoodPlateProps>`
       align-items: center;
 
       p {
-        color: #3d3d4d;
+        color: #999591;
       }
 
       .switch {

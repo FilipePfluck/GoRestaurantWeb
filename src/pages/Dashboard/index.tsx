@@ -27,7 +27,9 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadFoods(): Promise<void> {
-      // TODO LOAD FOODS
+      api.get('/foods').then(response => {
+        setFoods(response.data)
+      })
     }
 
     loadFoods();
@@ -37,7 +39,15 @@ const Dashboard: React.FC = () => {
     food: Omit<IFoodPlate, 'id' | 'available'>,
   ): Promise<void> {
     try {
-      // TODO ADD A NEW FOOD PLATE TO THE API
+      api.post('/foods', {
+        ...food,
+        available: true,
+      }).then(response => {
+        setFoods([...foods, response.data])
+
+        console.log(response.data)
+      })
+
     } catch (err) {
       console.log(err);
     }
@@ -46,11 +56,29 @@ const Dashboard: React.FC = () => {
   async function handleUpdateFood(
     food: Omit<IFoodPlate, 'id' | 'available'>,
   ): Promise<void> {
-    // TODO UPDATE A FOOD PLATE ON THE API
+    await api.put(`/foods/${editingFood.id}`, {
+      ...editingFood,
+      ...food,
+    }).then(response => {
+      const filteredFoods = foods.filter(filterFood => {
+        return filterFood.id !== response.data.id
+      })
+
+      setFoods([...filteredFoods, response.data])
+
+      console.log(response.data)
+    })
   }
 
   async function handleDeleteFood(id: number): Promise<void> {
-    // TODO DELETE A FOOD PLATE FROM THE API
+    await api.delete(`/foods/${id}`)
+
+    const filteredFoods = foods.filter(filterFood => {
+      return filterFood.id !== id
+    })
+
+    setFoods([...filteredFoods])
+
   }
 
   function toggleModal(): void {
@@ -62,7 +90,7 @@ const Dashboard: React.FC = () => {
   }
 
   function handleEditFood(food: IFoodPlate): void {
-    // TODO SET THE CURRENT EDITING FOOD ID IN THE STATE
+    setEditingFood(food)
   }
 
   return (
@@ -84,10 +112,12 @@ const Dashboard: React.FC = () => {
         {foods &&
           foods.map(food => (
             <Food
+              openModal={toggleEditModal}
               key={food.id}
               food={food}
               handleDelete={handleDeleteFood}
               handleEditFood={handleEditFood}
+              handleUpdateFood={handleUpdateFood}
             />
           ))}
       </FoodsContainer>

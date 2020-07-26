@@ -9,7 +9,7 @@ export const Container = styled.div<IContainerProps>`
   display: flex;
   align-items: center;
 
-  background: #fff;
+  background: #454545;
   border-radius: 8px;
   padding: 18px 24px;
   width: 100%;
