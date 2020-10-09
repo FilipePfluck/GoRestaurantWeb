@@ -12,6 +12,7 @@ interface IFoodPlate {
   image: string;
   price: string;
   description: string;
+  category: 'massas' | 'carnes' | 'pizzas';
   available: boolean;
 }
 
@@ -27,6 +28,7 @@ interface IEditFoodData {
   image: string;
   price: string;
   description: string;
+  category: 'massas' | 'carnes' | 'pizzas';
 }
 
 const ModalEditFood: React.FC<IModalProps> = ({

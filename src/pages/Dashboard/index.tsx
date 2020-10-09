@@ -16,6 +16,7 @@ interface IFoodPlate {
   image: string;
   price: string;
   description: string;
+  category: 'massas' | 'carnes' | 'pizzas';
   available: boolean;
 }
 
@@ -77,7 +78,7 @@ const Dashboard: React.FC = () => {
       return filterFood.id !== id
     })
 
-    setFoods([...filteredFoods])
+      setFoods([...filteredFoods])
 
   }
 

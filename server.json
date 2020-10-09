@@ -1,73 +1,31 @@
 {
   "foods": [
     {
-      "id": 1,
-      "name": "Ao molho de tomate",
-      "description": "Macarrão ao molho de tomates italianos. ",
-      "price": "19.90",
-      "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
-      "editingFood": {
-        "editingFood": {
-          "editingFood": {
-            "editingFood": {
-              "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
-              "name": "Ao molho de tomate",
-              "price": "19.90",
-              "description": "Macarrão ao molho de tomates italianos. ",
-              "available": true,
-              "id": 4
-            },
-            "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
-            "name": "Ao molho de tomate",
-            "price": "29.90",
-            "description": "Macarrão ao molho de tomates italianos. ",
-            "id": 4
-          },
-          "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
-          "name": "Ao molho de tomate",
-          "price": "19.90",
-          "description": "Macarrão ao molho de tomates italianos. ",
-          "id": 4
-        },
-        "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
-        "name": "Ao molho de tomate",
-        "price": "19.90",
-        "description": "Macarrão ao molho de tomates italianos. ",
-        "id": 4
-      }
+      "name": "Macarrão ao molho",
+      "price": "19.90",
+      "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas.",
+      "category": "massas",
+      "available": false,
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Macarrão Vegano",
-      "description": "Macarrão de origem totalmente vegetal, com pimentão, ervilha, salsa, e temperos naturais.",
-      "price": "39.90",
-      "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
-      "editingFood": {
-        "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
-        "name": "Macarrão Vegano",
-        "price": "39.90",
-        "description": "Macarrão de origem totalmente vegetal, com pimentão, salsa, e temperos naturais.",
-        "available": true,
-        "id": 5
-      }
-    },
-    {
-      "id": 3,
-      "name": "Veggie",
+      "name": "Macarrão Veggie",
+      "price": "18.50",
       "description": "Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.",
-      "price": "21.90",
+      "category": "massas",
       "available": true,
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
-      "editingFood": {
-        "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
-        "name": "Macarrão Vegano",
-        "price": "39.90",
-        "description": "Macarrão de origem totalmente vegetal, com pimentão, salsa, e temperos naturais.",
-        "available": true,
-        "id": 5
-      }
+      "id": 2
+    },
+    {
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
+      "name": "Macarrão A la Camarón",
+      "price": "28.90",
+      "description": "Macarrão com vegetais de primeira linha e camarão dos 7 mares.",
+      "category": "massas",
+      "available": true,
+      "id": 3
     }
   ]
 }

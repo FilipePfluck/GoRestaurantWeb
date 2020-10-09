@@ -13,6 +13,7 @@ interface IFoodPlate {
   price: string;
   description: string;
   available: boolean;
+  category: 'massas' | 'carnes' | 'pizzas';
 }
 
 interface IProps {
@@ -54,6 +55,7 @@ const Food: React.FC<IProps> = ({
       <section className="body">
         <h2>{food.name}</h2>
         <p>{food.description}</p>
+        <p>{food.category}</p>
         <p className="price">
           R$ <b>{food.price}</b>
         </p>
